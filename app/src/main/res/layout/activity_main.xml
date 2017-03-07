@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.appbusters.robinkamboj.customcam.MainActivity">
+
+    <SurfaceView
+        android:id="@+id/surfaceView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/top_buttons"
+            android:layout_margin="10sp"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="5sp"/>
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="5sp"/>
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="5sp"/>
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="5sp"/>
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="5sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/bottom_buttons"
+            android:layout_margin="5sp"
+            android:layout_above="@+id/horizontal_scroll"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_marginRight="10sp"
+                android:id="@+id/photo"/>
+
+            <ImageButton
+                android:layout_width="65sp"
+                android:layout_height="65sp"
+                android:background="@drawable/round_capture"
+                android:layout_margin="4sp"
+                android:id="@+id/capture"/>
+
+            <ImageButton
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@drawable/round_capture"
+                android:layout_marginLeft="10sp"
+                android:id="@+id/video"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/horizontal_scroll">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="4sp"
+                    android:background="@drawable/effects"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
