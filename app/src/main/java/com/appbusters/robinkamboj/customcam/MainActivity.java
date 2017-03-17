@@ -79,16 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
         capture = (ImageButton) findViewById(R.id.capture);
         assert capture != null;
+
         capture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        takePicture();
-                    }
-                }, 1000);
+                takePicture();
             }
         });
     }
@@ -248,13 +243,13 @@ public class MainActivity extends AppCompatActivity {
             captureRequestBuilder.addTarget(surface);
             cameraDevice.createCaptureSession(Arrays.asList(surface), new CameraCaptureSession.StateCallback(){
                 @Override
-                public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
+                public void onConfigured(@NonNull CameraCaptureSession captureSession) {
                     //The camera is already closed
                     if (null == cameraDevice) {
                         return;
                     }
                     // When the session is ready, we start displaying the preview.
-                    cameraCaptureSession = cameraCaptureSession;
+                    cameraCaptureSession = captureSession;
                     updatePreview();
                 }
                 @Override
