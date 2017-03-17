@@ -1,5 +1,6 @@
 package com.appbusters.robinkamboj.customcam;
 
+import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CaptureRequest;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private Handler handler;
     private HandlerThread handlerThread;
     private ImageReader imageReader;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -48,7 +50,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        capture = (ImageButton) findViewById(R.id.capture);
         preview = (TextureView) findViewById(R.id.preview);
+        assert preview != null;
+        preview.setSurfaceTextureListener(textureListener);
+
+        capture = (ImageButton) findViewById(R.id.capture);
+        assert capture != null;
     }
+
+    TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener(){
+
+        @Override
+        public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
+
+        }
+
+        @Override
+        public void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i1) {
+
+        }
+
+        @Override
+        public boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
+            return false;
+        }
+
+        @Override
+        public void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
+
+        }
+    };
 }
