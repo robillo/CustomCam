@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.appbusters.robinkamboj.customcam.MainActivity">
 
-    <SurfaceView
-        android:id="@+id/surfaceView2"
+    <TextureView
+        android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
