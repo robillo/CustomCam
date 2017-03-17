@@ -82,7 +82,13 @@ public class MainActivity extends AppCompatActivity {
         capture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                takePicture();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        takePicture();
+                    }
+                }, 1000);
             }
         });
     }
